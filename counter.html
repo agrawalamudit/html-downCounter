@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <button class="counter-btn" onclick="btnfoo()">
+            click me
+        </button>
+    </div>
+
+</body>
+<script>
+    let count=10;
+    let id;
+    function btnfoo()
+    {
+        i=setInterval(foo,1000);
+    }
+
+    function foo()
+    {
+        var d=document.getElementById("main");
+
+        var x=document.createElement("p");
+        var v=document.createTextNode(count);
+        x.appendChild(v);
+
+        d.appendChild(x);
+        count--;
+        if(count == 0)
+        {
+            clearInterval(i);
+        }
+    }
+</script>
+</html>
